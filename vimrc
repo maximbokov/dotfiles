@@ -22,16 +22,15 @@ runtime! plugin/sensible.vim
 " nanotech/jellybeans.vim
 " altercation/vim-colors-solarized
 " scrooloose/nerdcommenter
-" scrooloose/nerdtree"
+" scrooloose/nerdtree
+" edkolev/tmuxline.vim
+" bling/vim-airline
+" bling/vim-bufferline
 
 " Set background and font in gvim or vim
 if has("gui_running")
 	set background=light
-	if has("gui_gtk2")
-		set guifont=Inconsolata\ 11
-	elseif has("gui_win32")
-		set guifont=Consolas:h10:cANSI
-	endif
+	set guifont=Inconsolata\ for\ Powerline:h14
 else
 	set background=dark
 	" Set 256 colors for terminal (for solarized)
@@ -144,3 +143,9 @@ nnoremap Y y$
 
 " Unmap ex mode
 nnoremap Q <nop>
+
+" vim-airline settings
+"let g:airline#extensions#tabline#enable = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline_theme='powerlineish'
