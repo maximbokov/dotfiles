@@ -21,6 +21,8 @@ runtime! plugin/sensible.vim
 " kien/ctrlp.vim
 " nanotech/jellybeans.vim
 " altercation/vim-colors-solarized
+" scrooloose/nerdcommenter
+" scrooloose/nerdtree"
 
 " Set background and font in gvim or vim
 if has("gui_running")
