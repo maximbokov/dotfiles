@@ -26,6 +26,9 @@ runtime! plugin/sensible.vim
 " edkolev/tmuxline.vim
 " bling/vim-airline
 " bling/vim-bufferline
+" Valloric/YouCompleteMe
+" sukima/xmledit
+" sjl/gundo.vim
 
 " Set background and font in gvim or vim
 if has("gui_running")
@@ -64,6 +67,7 @@ set number
 " Set mapping with leader key
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>u :GundoToggle<CR>
 
 " Tagbar settings
 let g:tagbar_sort = 0 " Sort members of a type in order they were declared

@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-xmledit"]
 	path = vim/bundle/vim-xmledit
 	url = https://github.com/sukima/xmledit.git
+[submodule "vim/bundle/vim-gundo"]
+	path = vim/bundle/vim-gundo
+	url = http://github.com/sjl/gundo.vim.git
