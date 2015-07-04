@@ -145,7 +145,15 @@ nnoremap Y y$
 nnoremap Q <nop>
 
 " vim-airline settings
-"let g:airline#extensions#tabline#enable = 1
+let g:airline#extensions#tabline#enable = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#syntastic#enabled = 1
-let g:airline_theme='powerlineish'
+
+" Tmuxline (Configures Tmux's statusbar to match Vim's)
+let g:tmuxline_preset = 'full'
+
+" Setup vim-flavored-markdown
+augroup markdown
+	au!
+	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
