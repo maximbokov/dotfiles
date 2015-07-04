@@ -61,3 +61,9 @@
 [submodule "vim/bundle/vim-gundo"]
 	path = vim/bundle/vim-gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "vim/bundle/vim-syntastic"]
+	path = vim/bundle/vim-syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/vim-ultisnips"]
+	path = vim/bundle/vim-ultisnips
+	url = https://github.com/SirVer/ultisnips.git

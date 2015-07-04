@@ -3,4 +3,3 @@ setlocal shiftwidth=4
 setlocal expandtab
 setlocal smarttab
 setlocal softtabstop=4
-setlocal autoindent
