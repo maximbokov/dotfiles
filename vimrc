@@ -28,11 +28,12 @@ runtime! plugin/sensible.vim
 " edkolev/tmuxline.vim
 " bling/vim-airline
 " bling/vim-bufferline
-" Valloric/YouCompleteMe
 " sukima/xmledit
 " sjl/gundo.vim
 " dkprice/vim-easygrep
 " jtratner/vim-flavored-markdown
+" SirVer/ultisnips
+" honza/vim-snippets
 
 " Set background and font in gvim or vim
 if has("gui_running")
@@ -181,3 +182,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Settings for UltiSnips
+let g:UltiSnipsUsePythonVersion = 3
