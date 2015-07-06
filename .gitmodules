@@ -61,12 +61,6 @@
 [submodule "vim/bundle/vim-syntastic"]
 	path = vim/bundle/vim-syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "vim/bundle/vim-ultisnips"]
-	path = vim/bundle/vim-ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "vim/bundle/vim-youcompleteme"]
-	path = vim/bundle/vim-youcompleteme
-	url = https://github.com/Valloric/YouCompleteMe.git
