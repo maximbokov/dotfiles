@@ -64,3 +64,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/bundle/vim-youcompletem"]
+	path = vim/bundle/vim-youcompletem
+	url = https://github.com/Valloric/YouCompleteMe.git
