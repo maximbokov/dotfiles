@@ -34,6 +34,7 @@ runtime! plugin/sensible.vim
 " jtratner/vim-flavored-markdown
 " SirVer/ultisnips
 " honza/vim-snippets
+" Valloric/YouCompleteMe - works with vim that supports python 2
 
 " Set background and font in gvim or vim
 if has("gui_running")
@@ -126,16 +127,16 @@ set backspace=2
 nnoremap <leader>W :%s/\s\+$//<CR><C-o>
 
 if &encoding == "utf-8"
-	exe "set listchars=eol:\u00ac,nbsp:\u2423,conceal:\u22ef,tab:\u25b8\u2000,precedes:\u2026,extends:\u2026"
+	exe "set listchars=eol:\u00ac,nbsp:\u2423,conceal:\u22ef,tab:\u003a\u2000,precedes:\u2026,extends:\u2026"
 else
 	if &listchars ==# 'eol:$'
-		set listchars=tab:>  ,trail:-,extends:>,precedes:<,nbsp:+
+		set listchars=tab::  ,trail:-,extends:>,precedes:<,nbsp:+
 	endif
 endif
 
 " Enable indent folding, but have it disabled by default
-:set foldmethod=indent
-:set foldlevel=99
+set foldmethod=indent
+set foldlevel=99
 
 " Space to toggle folds
 nnoremap <Space> za
@@ -145,7 +146,7 @@ vnoremap <Space> za
 nnoremap vaa ggvGg_
 
 " Use braces to determine when to auto indent
-:set smartindent
+set smartindent
 
 " Make Y act like D and C
 nnoremap Y y$
@@ -168,11 +169,11 @@ augroup markdown
 augroup END
 
 " Settings for YouCompleteMe
-"let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
-"let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
-"let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
-"let g:ycm_complete_in_comments = 1 " Completion in comments
-"let g:ycm_complete_in_strings = 1 " Completion in string
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
 
 " Settings for syntastic
 set statusline+=%#warningmsg#
@@ -184,9 +185,20 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Settings for UltiSnips
-let g:UltiSnipsUsePythonVersion = 3
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger       = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
+if has('python')
+	let g:jedi#force_py_version = 2
+	let g:syntastic_python_python_exec = 'python2'
+	let g:pymode_python = 'python2'
+elseif has('python3')
+	let g:jedi#force_py_version = 3
+	let g:syntastic_python_python_exec = 'python3'
+	let g:pymode_python = 'python3'
+else
+	let g:loaded_jedi = 1
+endif
