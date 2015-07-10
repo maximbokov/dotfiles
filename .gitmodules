@@ -73,3 +73,6 @@
 [submodule "vim/bundle/vim-pony"]
 	path = vim/bundle/vim-pony
 	url = https://github.com/jmcomets/vim-pony.git
+[submodule "vim/bundle/vim-python-mode"]
+	path = vim/bundle/vim-python-mode
+	url = https://github.com/klen/python-mode.git
