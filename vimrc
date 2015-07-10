@@ -1,4 +1,11 @@
 " 07/20/2015 Maxim V Bokov
+
+" Do not load YouCompleteMe if vim does not support python 2
+let g:pathogen_disabled = []
+if !has('python')
+	call add(g:pathogen_disabled, 'vim-youcompleteme')
+endif
+
 " Add pathogen package manager
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
@@ -195,10 +202,12 @@ if has('python')
 	let g:jedi#force_py_version = 2
 	let g:syntastic_python_python_exec = 'python2'
 	let g:pymode_python = 'python2'
+	let g:UltiSnipsUsePythonVersion = 2
 elseif has('python3')
 	let g:jedi#force_py_version = 3
 	let g:syntastic_python_python_exec = 'python3'
 	let g:pymode_python = 'python3'
+	let g:UltiSnipsUsePythonVersion = 3
 else
 	let g:loaded_jedi = 1
 endif
