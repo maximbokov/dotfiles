@@ -1,0 +1,20 @@
+[alias]
+	aa = add --all
+	ao = add --patch
+	ca = commit --amend
+	co = checkout
+	ci = commit
+	cp = cherry-pick
+	st = status
+	sl = stash list
+	sp = stash pop
+	br = branch
+	hist = log --pretty=format:\"%h %cd%C(yellow)%d%Creset %s%C(green) [%an]%Creset\" --graph --date=short
+	ll = log --pretty=format:\"%h %cd%C(yellow)%d%Creset %s%C(green) [%an]%Creset\" --decorate --numstat --date=short
+	d = diff
+	dc = diff --cached
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+	type = cat-file -t
+	dump = cat-file -p
