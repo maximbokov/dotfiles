@@ -41,7 +41,10 @@ runtime! plugin/sensible.vim
 " jtratner/vim-flavored-markdown
 " SirVer/ultisnips
 " honza/vim-snippets
-" Valloric/YouCompleteMe - works with vim that supports python 2
+" davidhalter/jedi-vim
+
+" Disable docstring to pop up
+"autocmd FileType python setlocal completeopt-=preview
 
 " Set background and font in gvim or vim
 if has("gui_running")
@@ -211,3 +214,30 @@ elseif has('python3')
 else
 	let g:loaded_jedi = 1
 endif
+
+" Jedi settings
+let g:jedi#usages_command = "<leader>u"
+let g:jedi#rename_command = "<leader>rn"
+
+" Python-mode settings
+let g:pymode_rope = 0 " Disable rope for using jedi
+let g:pymode_options_colorcolumn = 0 " Disable colorline at max line length column
+let g:pymode_indent = 1 " Enable python indentation
+let g:pymode_folding = 1 " Enable folding
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
+
+" Support virtualenv
+let g:pymode_virtualenv = 1
+
+" Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+
+" syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
