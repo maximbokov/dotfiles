@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-jedi-vim"]
 	path = vim/bundle/vim-jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/bundle/vim-promptline"]
+	path = vim/bundle/vim-promptline
+	url = https://github.com/edkolev/promptline.vim.git
