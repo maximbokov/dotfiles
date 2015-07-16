@@ -1,6 +1,7 @@
 " 07/20/2015 Maxim V Bokov
+" To get macvim go to macvim-dev/macvim on gitHub
 
-" Do not load YouCompleteMe if vim does not support python 2
+" It is an example how to turn off a plugin
 let g:pathogen_disabled = []
 if !has('python')
 	call add(g:pathogen_disabled, 'vim-youcompleteme')
@@ -66,6 +67,10 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 " Disable autocomments on a new line for all types of files
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -212,6 +217,7 @@ endif
 " Jedi settings
 let g:jedi#usages_command = "<leader>u"
 let g:jedi#rename_command = "<leader>rn"
+let g:jedi#show_call_signatures = 2 " Show call(method) signature in the command line
 
 " Python-mode settings
 let g:pymode_rope = 0 " Disable rope for using jedi
