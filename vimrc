@@ -49,9 +49,13 @@ runtime! plugin/sensible.vim
 "autocmd FileType python setlocal completeopt-=preview
 
 " Set background and font in gvim or vim
-if has("gui_running")
+if has('gui_running')
 	set background=light
-	set guifont=Inconsolata\ for\ Powerline:h14
+	if !has('win32')
+		set guifont=Inconsolata\ for\ Powerline:h14
+	else
+		set guifont=Courier\ New:h12
+	endif
 else
 	set background=dark
 	" Set 256 colors for terminal (for solarized)
@@ -172,7 +176,9 @@ nnoremap Q <nop>
 
 " vim-airline settings
 let g:airline#extensions#tabline#enable = 1
-let g:airline_powerline_fonts = 1
+if !has('win32')
+	let g:airline_powerline_fonts = 1
+endif
 let g:airline#extensions#syntastic#enabled = 1
 
 " Tmuxline (Configures Tmux's statusbar to match Vim's)
