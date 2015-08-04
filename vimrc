@@ -112,6 +112,7 @@ nmap <leader>ev :edit $MYVIMRC<CR>
 nmap <leader>et :edit $HOME/.tmux.conf<CR>
 nmap <leader>eb :edit $HOME/.bash_aliases<CR>
 nmap <leader>eg :edit $HOME/.gitaliases<CR>
+nmap <leader>en :enew<CR>
 
 " Reload vimrc file
 nmap <leader>rv :source $MYVIMRC<CR>
