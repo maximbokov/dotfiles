@@ -90,6 +90,9 @@ set modelines=5
 set number
 "set relativenumber
 
+" Set hidden to keep undos
+set hidden
+
 " Set mapping with leader key
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
