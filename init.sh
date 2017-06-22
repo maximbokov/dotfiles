@@ -10,12 +10,14 @@ for file in $dir/*
 do
 	filename=$(basename $file)
 	echo $file
-	if [[ "$filename" != "$(basename $0)" ]]; then
+	if [[ !($filename =~ .*\.(sh|md)) ]]; then
 		echo "Creating link for .$filename"
 		# move existing dotfiles to $backup
 		mv $HOME/.$filename $backup/
 		# create symlink
 		ln -s $dir/$filename $HOME/.$filename
+	else
+		echo "Skipping $file"
 	fi
 done
 
