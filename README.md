@@ -9,3 +9,4 @@ echo "if [ -f $HOME/.bash_aliases ]; then . $HOME/.bash_aliases; fi" >> ~/.bashr
 Configure git to use the global gitignore_global
 
 git config --global core.excludesfile ~/.gitignore_global
+
